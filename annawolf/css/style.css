@@ -310,15 +310,17 @@ figure.effect-sadie figcaption::before {
 }
 
 figure.effect-sadie h2 {
+	text-align: left;
 	position: absolute;
 	top: 50%;
-	left: 0;
+	left: 26px;
 	width: 100%;
-	color: #484c61;
+	color: #000;
+	opacity: 0;
 	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
 	transition: transform 0.35s, color 0.35s;
 	-webkit-transform: translate3d(0,-50%,0);
-	transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-10%,0);
 }
 
 figure.effect-sadie figcaption::before,
@@ -326,8 +328,14 @@ figure.effect-sadie p {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 }
+figure.effect-sadie figcaption::before,
+figure.effect-sadie h2 {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
 
 figure.effect-sadie p {
+	text-align: left;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -338,10 +346,11 @@ figure.effect-sadie p {
 	transform: translate3d(0,10px,0);
 }
 
+figure.effect-sadie:hover figcaption::before ,
 figure.effect-sadie:hover h2 {
-	color: #fff;
-	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,-20px,0);
 }
 
 figure.effect-sadie:hover figcaption::before ,
